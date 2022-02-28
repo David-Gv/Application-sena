@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:proyecto_sena/Widgets/Background.dart';
 import 'package:proyecto_sena/Widgets/CustomBottomNavigation.dart';
 import 'package:proyecto_sena/Widgets/PageTitle.dart';
+import 'package:proyecto_sena/Widgets/areas.dart';
 
 class VistaPrincipal extends StatelessWidget {
   @override
@@ -14,6 +15,7 @@ class VistaPrincipal extends StatelessWidget {
           children:[ 
             Background(),
             _Homebody(),
+            
         ]
       ),
       bottomNavigationBar: CustomBottomNavigation()
@@ -28,7 +30,8 @@ class _Homebody extends StatelessWidget {
         child: Column(
       children: [
         PageTitle(),
-        
+        SizedBox(height: 40,),
+        Areas()
       ],
     ));
   }
