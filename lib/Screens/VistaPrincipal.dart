@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:proyecto_sena/Widgets/Background.dart';
 import 'package:proyecto_sena/Widgets/CustomBottomNavigation.dart';
 import 'package:proyecto_sena/Widgets/PageTitle.dart';
-import 'package:proyecto_sena/Widgets/areas.dart';
+import 'package:proyecto_sena/Widgets/ConsumeArea.dart';
 
 class VistaPrincipal extends StatelessWidget {
   @override
@@ -31,7 +31,7 @@ class _Homebody extends StatelessWidget {
       children: [
         PageTitle(),
         SizedBox(height: 40,),
-        Areas()
+        ConsumeArea()
       ],
     ));
   }

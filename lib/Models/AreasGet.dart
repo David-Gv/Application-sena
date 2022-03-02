@@ -1,25 +1,25 @@
 // To parse this JSON data, do
 //
-//     final areas = areasFromJson(jsonString);
+//     final area = areaFromJson(jsonString);
 
 import 'dart:convert';
 
-List<Areas> areasFromJson(String str) => List<Areas>.from(json.decode(str).map((x) => Areas.fromJson(x)));
+List<Area> areaFromJson(String str) => List<Area>.from(json.decode(str).map((x) => Area.fromJson(x)));
 
-String areasToJson(List<Areas> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
+String areaToJson(List<Area> data) => json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class Areas {
-    Areas({
-        this.codigoArea = "",
-        this.nombreArea = "",
-        this.logoArea = "",
+class Area {
+    Area({
+        required this.codigoArea,
+        required this.nombreArea,
+        required this.logoArea,
     });
 
     String codigoArea;
     String nombreArea;
     String logoArea;
 
-    factory Areas.fromJson(Map<String, dynamic> json) => Areas(
+    factory Area.fromJson(Map<String, dynamic> json) => Area(
         codigoArea: json["codigo_area"],
         nombreArea: json["nombre_area"],
         logoArea: json["logo_area"],
