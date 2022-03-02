@@ -31,3 +31,6 @@ class Area {
         "logo_area": logoArea,
     };
 }
+
+
+

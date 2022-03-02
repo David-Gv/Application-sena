@@ -14,8 +14,8 @@ class VistaPrincipal extends StatelessWidget {
         body: Stack(
           children:[ 
             Background(),
-            _Homebody(),
-            
+            //_Homebody(),
+            ConsumeArea(),
         ]
       ),
       bottomNavigationBar: CustomBottomNavigation()
@@ -26,13 +26,14 @@ class VistaPrincipal extends StatelessWidget {
 class _Homebody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return Scrollbar(
         child: Column(
       children: [
         PageTitle(),
         SizedBox(height: 40,),
-        ConsumeArea()
-      ],
+        
+       
+      ]
     ));
   }
 
