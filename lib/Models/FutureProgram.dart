@@ -4,10 +4,12 @@ import 'package:proyecto_sena/Models/ProgramsPost.dart';
 
 Future<List<Program>> PostPrograms(programas) async {
   final url = Uri.parse('https://aplicativo-sena.000webhostapp.com/programas.php');
-  final response = await http.post(url, body: jsonEncode(programas));
-  if (response.statusCode == 200) {
-    return programFromJson(response.body);
+  final respuesta = await http.post(url, body:programas);
+  if (respuesta.statusCode == 200) {
+    print("respuesta.body");
+    return programFromJson(respuesta.body);
   } else {
-    throw Exception(response.body);
+    throw Exception('Failed to load area');
   }
 }
+

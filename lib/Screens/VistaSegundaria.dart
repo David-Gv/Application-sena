@@ -23,7 +23,7 @@ class VistaSegundaria extends StatelessWidget {
               ),
               child: ListTile(
                 title: Center(
-                  child: Text(programa[index].codigoPrograma,
+                  child: Text(programa[index].nombreArea2,
                     style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
                   )
                 ),

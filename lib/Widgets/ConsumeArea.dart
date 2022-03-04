@@ -55,6 +55,8 @@
 
 // ignore_for_file: use_key_in_widget_constructors
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:proyecto_sena/Models/AreasGet.dart';
 import 'package:http/http.dart' as http;
@@ -119,7 +121,7 @@ class _ConsumeArea extends State<ConsumeArea> {
             onTap: () async {
               List<Program> programa;
               Program program = Program(nombreArea2: data[i].nombreArea);
-              programa = await PostPrograms(program);
+              programa = await PostPrograms(jsonEncode(program));
               Navigator.of(context).push(MaterialPageRoute(
                 builder: (context) {
                   return Scaffold(
